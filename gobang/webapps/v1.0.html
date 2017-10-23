@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五子棋--画棋盘</title>
+</head>
+<body>
+<table style="width: 600px;margin-top: 3%" align="center" border="1" id="content"></table>
+<script>
+    /**
+     *  全局变量，相当于绑定在window全局对象上
+     *  定义了棋盘为15路
+     **/
+    var road = 14;  // window.road
+
+    /*自定义函数*/
+    /*用于实现一个具体的功能，生成N路棋盘的一行*/
+    function initRowHtml(road) {
+        var rowHtml = '<tr style="height: 40px">';
+        /*road 局部变量，优先级最高，就近原则*/
+        for (var i = 0; i < road; i++) {
+            rowHtml += '<td></td>';
+        }
+        rowHtml += '</tr>';
+        return rowHtml;
+    }
+
+    /**
+     * 生成棋盘行列的html
+     * @type {Array}
+     */
+    var rows = [];
+    /**
+     * 初始化
+     */
+    var rowHtml = initRowHtml(road);
+    for (var i = 0; i < road; i++) {
+        rows.push(rowHtml);
+    }
+    document.getElementById('content').innerHTML = rows.join("");
+</script>
+</body>
+</html>

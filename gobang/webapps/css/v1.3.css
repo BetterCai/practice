@@ -1,0 +1,38 @@
+.main {
+    margin: 3% auto;
+    padding-top: 6px;
+    width: 488px;
+    height: 485px;
+    background: url(img/backgroud.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.main .content {
+    margin-left: 9px;
+}
+
+.main table tr {
+    height: 27px;
+}
+
+.main table tr td {
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
+}
+
+.black {
+    height: 27px;
+    width: 27px;
+    background: url(img/black.png) no-repeat;
+    background-size: 100%;
+    cursor: not-allowed;
+}
+
+.white {
+    height: 27px;
+    width: 27px;
+    background: url(img/white.png) no-repeat;
+    background-size: 100%;
+    cursor: not-allowed;
+}
